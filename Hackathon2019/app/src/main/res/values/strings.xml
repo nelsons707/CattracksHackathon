@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CatTracks</string>
     <string name="action_settings">Settings</string>
+    <string name="edit_destination">Enter your destination!</string>
+    <string name="button_routes">Find Your Routes!</string>
+    <string name="edit_location">Enter your location!</string>
 </resources>
