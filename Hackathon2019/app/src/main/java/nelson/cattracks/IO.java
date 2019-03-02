@@ -29,14 +29,16 @@ public class IO extends AppCompatActivity {
     /** Called when user taps the Find Your Routes button! **/
     public void sendRoutes(View view){
         /** Reads the content of the text fields and sends it to the next activity **/
-        Intent intent = new Intent(this, Map.class);                 //DisplayMessageActivity needs to be the class of the next activity
+        Intent intent = new Intent(this, MapsActivity.class);                                    /** The class of this line is the next activity we want it to run */
+        Intent intent2 = new Intent(this, Map.class);
         EditText editText = (EditText) findViewById(R.id.editText8);
         EditText editText1 = (EditText) findViewById(R.id.editText9);
         String location = editText.getText().toString();
         String destination = editText1.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, location);
-        intent.putExtra(EXTRA_MESSAGE, destination);
+        intent2.putExtra(EXTRA_MESSAGE, destination);
         startActivity(intent);
+        //startActivity(intent2);
     }
 
     @Override

@@ -4,4 +4,5 @@
     <string name="edit_destination">Enter your destination!</string>
     <string name="button_routes">Find Your Routes!</string>
     <string name="edit_location">Enter your location!</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
