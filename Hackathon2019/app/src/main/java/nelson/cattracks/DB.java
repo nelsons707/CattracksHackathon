@@ -22,25 +22,50 @@ public class DB {
         }
     }
 
-    public static void getCoordinates(String addressName) {
+    public double getCoordinatesX(String addressName) {
         try {
+            double x = 0;
             Statement statement = connection.createStatement();
             statement.setQueryTimeout(30);  // set timeout to 30 sec.
             ResultSet coordinates = statement.executeQuery(
-                    "select loc_coord_x, loc_coord_y "
+                    "select loc_coord_x"
                             + "from Location "
                             + "where loc_name = '" + addressName + "'");
             while (coordinates.next()) {
-                System.out.println("x_coord = " + coordinates.getDouble("loc_coord_x"));
-                System.out.println("y_coord = " + coordinates.getDouble("loc_coord_y"));
+                x = coordinates.getDouble("loc_coord_x");
             }
+
+            return x;
         }
         catch (SQLException e) {
             System.err.println(e);
         }
+        return 0;
+    }
+
+    public double getCoordinatesY(String addressName) {
+        try {
+            double y = 0;
+            Statement statement = connection.createStatement();
+            statement.setQueryTimeout(30);  // set timeout to 30 sec.
+            ResultSet coordinates = statement.executeQuery(
+                    "select loc_coord_y"
+                            + "from Location "
+                            + "where loc_name = '" + addressName + "'");
+            while (coordinates.next()) {
+                y = coordinates.getDouble("loc_coord_y");
+            }
+
+            return y;
+        }
+        catch (SQLException e) {
+            System.err.println(e);
+        }
+        return 0;
     }
 
 /*
+
 select loc_coord_x, loc_coord_y
 from Location
 where loc_name = (addressName)
