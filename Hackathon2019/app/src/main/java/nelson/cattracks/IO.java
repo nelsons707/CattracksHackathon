@@ -32,7 +32,7 @@ public class IO extends AppCompatActivity {
         setContentView(R.layout.activity_io);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        DB.startConnection();
     }
 
     /** Called when user taps the Find Your Routes button! **/
