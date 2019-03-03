@@ -5,4 +5,36 @@
     <string name="button_routes">Find Your Routes!</string>
     <string name="edit_location">Enter your location!</string>
     <string name="title_activity_maps">Map</string>
+    <string-array name="busStops">
+        <item>Students Activites and Athletics Center</item>
+        <item>Castle Air Park</item>
+        <item>Emigrant Pass at Scholars Lane</item>
+        <item>Bellevue Ranch on Arrow Wood Dr</item>
+        <item>Ironstone Dr.</item>
+        <item>Merced College The Bus Terminal</item>
+        <item>Village Apt. "M" Streets</item>
+        <item>Merced Mall Target</item>
+        <item>Buena Vista</item>
+        <item>Compass Pointe Apts (Bus Stop On Pacific In Front)</item>
+        <item>"R" Street Village Apts</item>
+        <item>Mercy Hospital/Tri-College</item>
+        <item>Tri-College/Mercy (Bus stop On "G" Next To Tri College)</item>
+        <item>El Portal and "G" Street (Bus Stop On "G")</item>
+        <item>El Portal Plaza and "G" Street (Bus Stop on "G")</item>
+        <item>Rite Aid/Walgreens</item>
+        <item>G St. and W. Alexander Ave. </item>
+        <item>G St. and Alexander</item>
+        <item>Meadows Ave and Olivewood Dr.</item>
+        <item>Walmart on Loughborough</item>
+        <item>Granville Apartments</item>
+        <item>Moraga Subdivision</item>
+        <item>Starbucks/Promenade Center</item>
+        <item>Yosemite and Cordova</item>
+        <item>Amtrak Station</item>
+        <item>K st. Between 18th and 19th</item>
+        <item>Granville Luxury Apts.</item>
+        <item>University Surgery Center</item>
+        <item>Cardella Road and M st. </item>
+        <item>El Redondo Dr.</item>
+    </string-array>
 </resources>
