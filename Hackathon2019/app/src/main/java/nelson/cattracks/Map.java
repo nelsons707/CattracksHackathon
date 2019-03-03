@@ -15,16 +15,19 @@ public class Map extends AppCompatActivity {
         setContentView(R.layout.activity_map);
 
         Intent intent = getIntent();
-        Intent intent2 = getIntent();
-        String message = intent.getStringExtra(IO.EXTRA_MESSAGE);
-        String message2 = intent.getStringExtra(IO.EXTRA_MESSAGE);
-
-        // Capture the layout's TextView and set the string as its text
+        String message = intent.getStringExtra(IO.Source);
         TextView textView = findViewById(R.id.textView);
         textView.setText(message);
 
+
+        Intent intent2 = getIntent();
+        String message2 = intent2.getStringExtra(IO.Destination);
         TextView textView2 = findViewById(R.id.textView2);
-        textView2.setText(message);
+        textView2.setText(message2);
+        // Capture the layout's TextView and set the string as its text
+
+
+
     }
 
     /** This class needs to display the map,

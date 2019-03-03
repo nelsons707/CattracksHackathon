@@ -1,5 +1,6 @@
 package nelson.cattracks;
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,9 +14,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.model.LatLng;
+
+import com.google.android.gms.common.api.GoogleApiClient;
 
 public class IO extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+    public static final String Source = "com.example.myfirstapp.MESSAGE";
+    public static final String Destination = "titty";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +38,14 @@ public class IO extends AppCompatActivity {
     /** Called when user taps the Find Your Routes button! **/
     public void sendRoutes(View view){
         /** Reads the content of the text fields and sends it to the next activity **/
-        Intent intent = new Intent(this, MapsActivity.class);                                    /** The class of this line is the next activity we want it to run */
+        Intent intent = new Intent(this, Map.class);                                    /** The class of this line is the next activity we want it to run */
         Intent intent2 = new Intent(this, Map.class);
         EditText editText = (EditText) findViewById(R.id.editText8);
-        EditText editText1 = (EditText) findViewById(R.id.editText9);
         String location = editText.getText().toString();
+        EditText editText1 = (EditText) findViewById(R.id.editText9);
         String destination = editText1.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, location);
-        intent2.putExtra(EXTRA_MESSAGE, destination);
+        intent.putExtra(Source, location);
+        intent2.putExtra(Destination, destination);
         startActivity(intent);
         //startActivity(intent2);
     }
